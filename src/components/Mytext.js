@@ -25,6 +25,12 @@ const LowerCase = () =>{
     setText(newText);
 }
 
+const SenClick = ()=>{
+    // console.log("Uppercase clicked" + text);
+    let newText = text[0].toUpperCase() + text.toLowerCase();
+    setText(newText);        
+}
+
    const onchange = (e) =>{
     console.log("opclicked");
     setText(e.target.value);
@@ -44,6 +50,7 @@ const LowerCase = () =>{
 
     <button className="btn btn-primary my-5 mx-2" onClick={OnClick}>type "hi"</button>
     <button className="btn btn-primary my-5 mx-2" onClick={OffClick}>type "hello"</button>
+    <button className='btn btn-primary my-5 mx-3' onClick={SenClick} >change to Sentance case</button>
     <button className="btn btn-primary my-5 mx-2" onClick={UpperCase}>change to uppercase</button>
     <button className="btn btn-primary my-5 mx-2" onClick={LowerCase}>change to Lowercase</button>
 
