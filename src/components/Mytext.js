@@ -7,11 +7,11 @@ export default function Mytext(props) {
 
     const OnClick = () =>{
          console.log("clicked");
-         setText("hi");
+         setText(Text + " hi");
     }
     const OffClick = () =>{
         console.log("offclicked");
-        setText("hello");
+        setText(Text + " hello");
    }
 
    const UpperCase = () =>{
@@ -27,8 +27,11 @@ const LowerCase = () =>{
 
 const SenClick = ()=>{
     // console.log("Uppercase clicked" + text);
-    let newText = text[0].toUpperCase() + text.toLowerCase();
+    let newText = Text[0].toUpperCase() + Text.toLowerCase();
     setText(newText);        
+}
+const Clear = ()=>{
+    setText("");        
 }
 
    const onchange = (e) =>{
@@ -50,9 +53,10 @@ const SenClick = ()=>{
 
     <button className="btn btn-primary my-5 mx-2" onClick={OnClick}>type "hi"</button>
     <button className="btn btn-primary my-5 mx-2" onClick={OffClick}>type "hello"</button>
-    <button className='btn btn-primary my-5 mx-3' onClick={SenClick} >change to Sentance case</button>
+    <button className="btn btn-primary my-5 mx-2" onClick={SenClick} >change to Sentance case</button>
     <button className="btn btn-primary my-5 mx-2" onClick={UpperCase}>change to uppercase</button>
     <button className="btn btn-primary my-5 mx-2" onClick={LowerCase}>change to Lowercase</button>
+    <button className="btn btn-primary my-5 mx-2" onClick={Clear} >Clear</button>
 
     <div className="container">
         <h1>Text Summary</h1>
